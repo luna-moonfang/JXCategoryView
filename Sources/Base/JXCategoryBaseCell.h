@@ -11,6 +11,7 @@
 #import "JXCategoryViewAnimator.h"
 #import "JXCategoryViewDefines.h"
 
+/// df: JXCategoryBaseCell 对应 segment 结构中的一项
 @interface JXCategoryBaseCell : UICollectionViewCell
 
 @property (nonatomic, strong, readonly) JXCategoryBaseCellModel *cellModel;

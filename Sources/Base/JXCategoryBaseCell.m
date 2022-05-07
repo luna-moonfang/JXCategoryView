@@ -49,7 +49,8 @@
 
 - (void)initializeViews {
     _animationBlockArray = [NSMutableArray array];
-
+    
+    // df: 忽略RTL(right to left)
     [RTLManager horizontalFlipViewIfNeeded:self];
     [RTLManager horizontalFlipViewIfNeeded:self.contentView];
 }
@@ -58,6 +59,7 @@
     self.cellModel = cellModel;
 
     if (cellModel.isSelectedAnimationEnabled) {
+        // ???: why remove last
         [self.animationBlockArray removeLastObject];
         if ([self checkCanStartSelectedAnimation:cellModel]) {
             self.animator = [[JXCategoryViewAnimator alloc] init];
@@ -69,7 +71,14 @@
 }
 
 - (BOOL)checkCanStartSelectedAnimation:(JXCategoryBaseCellModel *)cellModel {
-    BOOL canStartSelectedAnimation = ((cellModel.selectedType == JXCategoryCellSelectedTypeCode) || (cellModel.selectedType == JXCategoryCellSelectedTypeClick));
+    BOOL canStartSelectedAnimation;
+    if (cellModel.selectedType == JXCategoryCellSelectedTypeCode ||
+        cellModel.selectedType == JXCategoryCellSelectedTypeClick) {
+        canStartSelectedAnimation = YES; // 代码调用或点击可执行动画
+    } else {
+        canStartSelectedAnimation = NO; // 滑动不执行动画, 应该是执行跟手的交互动画
+    }
+    
     return canStartSelectedAnimation;
 }
 
