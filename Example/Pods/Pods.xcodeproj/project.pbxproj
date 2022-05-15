@@ -55,6 +55,8 @@
 		75C55BABDE80FC5FA5BF5F6DA11ABD30 /* JXCategoryNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DAC239D25A8E49CBB279AD74FC3721 /* JXCategoryNumberView.m */; };
 		76C17640D38EB615620AEA1A6C5825AC /* JXCategoryIndicatorCellModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A55EA9A252F372912E4E8EFFB7E7B5C /* JXCategoryIndicatorCellModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		79476270F8F5851B81EACD3C94000F74 /* JXCategoryIndicatorBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = C3F51DB7465094AEE429995E690AFA56 /* JXCategoryIndicatorBackgroundView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7D71B47C283163A800F75F34 /* DFContentBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D71B47A283163A800F75F34 /* DFContentBaseViewController.h */; };
+		7D71B47D283163A800F75F34 /* DFContentBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D71B47B283163A800F75F34 /* DFContentBaseViewController.m */; };
 		82D87E4C180EFE52C2F55E5E2A0DCD59 /* JXCategoryTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3FE17744C1E95AD40D9446AF99B7D5 /* JXCategoryTitleCell.m */; };
 		8592ACF93AFCF1B803010EBD71E977C9 /* JXCategoryTitleImageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C930E1655489D09D8D441F60662773 /* JXCategoryTitleImageCellModel.m */; };
 		85DE068409EDC929CDC412F4881E8459 /* JXPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4073587C8E20E39B729F8DDA0A40341C /* JXPagerView.m */; };
@@ -173,6 +175,8 @@
 		78FAFDBEC6462D3D1994809FAD29DBB3 /* JXCategoryTitleVerticalZoomCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXCategoryTitleVerticalZoomCell.m; sourceTree = "<group>"; };
 		7C1AEF943C24F4B6B0D02A3D6C987371 /* JXCategoryView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JXCategoryView.release.xcconfig; sourceTree = "<group>"; };
 		7C24472E9961A37A1ADB5CF73CE2BACD /* JXCategoryIndicatorRainbowLineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXCategoryIndicatorRainbowLineView.h; sourceTree = "<group>"; };
+		7D71B47A283163A800F75F34 /* DFContentBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFContentBaseViewController.h; sourceTree = "<group>"; };
+		7D71B47B283163A800F75F34 /* DFContentBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFContentBaseViewController.m; sourceTree = "<group>"; };
 		7FA2EEF0FCE73E90C3779CC785B55755 /* JXCategoryFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXCategoryFactory.h; sourceTree = "<group>"; };
 		828541D43D03C63E4B36906D1508762F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		838F732AE0215C8414073025BAEDFAF0 /* JXCategoryIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXCategoryIndicatorView.m; sourceTree = "<group>"; };
@@ -509,6 +513,8 @@
 				C00FACDE6ADDFE74C4A5E4A6D990FB5F /* Title */,
 				B6AA9E06C1D18BC9D99DBAA0F21AD82B /* TitleImage */,
 				53818DC31E3751C1F306CC9137CAF092 /* VerticalZoomTitle */,
+				7D71B47A283163A800F75F34 /* DFContentBaseViewController.h */,
+				7D71B47B283163A800F75F34 /* DFContentBaseViewController.m */,
 			);
 			name = JXCategoryView;
 			path = ../..;
@@ -620,6 +626,7 @@
 				79476270F8F5851B81EACD3C94000F74 /* JXCategoryIndicatorBackgroundView.h in Headers */,
 				617C9989CB9957CEA367DE1281957DF9 /* JXCategoryIndicatorBallView.h in Headers */,
 				4D933983CD017390046975380FAA325E /* JXCategoryIndicatorCell.h in Headers */,
+				7D71B47C283163A800F75F34 /* DFContentBaseViewController.h in Headers */,
 				76C17640D38EB615620AEA1A6C5825AC /* JXCategoryIndicatorCellModel.h in Headers */,
 				147E5B67C60DDA2FE47A7B36B7B4D54B /* JXCategoryIndicatorComponentView.h in Headers */,
 				57B18444DC4307DC1744F31EBEFC061D /* JXCategoryIndicatorDotLineView.h in Headers */,
@@ -802,6 +809,7 @@
 				D7D2E7EBC7CB01D9B015A3CEAD8E992A /* JXCategoryTitleView.m in Sources */,
 				3B9A951276C93259BD0F8711E195367C /* JXCategoryView-dummy.m in Sources */,
 				1820A72F3736EA2D6A4D86AD0F79B7AD /* JXCategoryViewAnimator.m in Sources */,
+				7D71B47D283163A800F75F34 /* DFContentBaseViewController.m in Sources */,
 				19F22BDFCD0EFD658287B22F40ED00A5 /* RTLManager.m in Sources */,
 				F64B7D029DCC4446F710B8C31FC0C372 /* UIColor+JXAdd.m in Sources */,
 			);
