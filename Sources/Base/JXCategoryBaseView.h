@@ -14,6 +14,7 @@
 
 @class JXCategoryBaseView;
 
+/// 和 JXCategoryView 联动的容器需要实现的协议
 @protocol JXCategoryViewListContainer <NSObject>
 - (void)setDefaultSelectedIndex:(NSInteger)index;
 - (UIScrollView *)contentScrollView;
@@ -87,7 +88,7 @@
 /**
  推荐使用封装度更高的listContainer属性。如果使用contentScrollView请参考`LoadDataListCustomViewController`使用示例。
  */
-@property (nonatomic, strong) UIScrollView *contentScrollView;
+@property (nonatomic, strong) UIScrollView *contentScrollView; // deprecated
 
 @property (nonatomic, assign) NSInteger defaultSelectedIndex;   //修改初始化的时候默认选择的index
 
