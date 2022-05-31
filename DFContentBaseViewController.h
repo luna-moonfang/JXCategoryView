@@ -13,15 +13,16 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// CategoryView位置
-typedef NS_ENUM(NSInteger, DFContentBaseViewControllerCategoryViewStyle) {
-    DFContentBaseViewControllerCategoryViewStyleDefault = 0, // navbar下方
-    DFContentBaseViewControllerCategoryViewStyleTitleView, // navbar's titleview
+typedef NS_ENUM(NSInteger, DFCategoryViewStyle) {
+    DFCategoryViewStyleDefault = 0, // navbar下方
+    DFCategoryViewStyleTitleView, // navbar's titleview
 };
 
 @interface DFContentBaseViewController : UIViewController <JXCategoryViewDelegate, JXCategoryListContainerViewDelegate, JXCategoryListContentViewDelegate>
 
-@property (nonatomic, readonly) DFContentBaseViewControllerCategoryViewStyle categoryViewStyle;
+@property (nonatomic, readonly) DFCategoryViewStyle categoryViewStyle;
 
+// 模仿pagevc/tabvc添加的容器属性
 @property (nullable, nonatomic, copy) NSArray<__kindof UIViewController *> *viewControllers; // set view controllers before push/present DFContentBaseViewController
 @property (nullable, nonatomic, weak) __kindof UIViewController *selectedViewController;
 @property (nonatomic, assign) NSInteger selectedIndex;
@@ -32,7 +33,10 @@ typedef NS_ENUM(NSInteger, DFContentBaseViewControllerCategoryViewStyle) {
 @property (nonatomic, strong) JXCategoryTitleView *categoryTitleView;
 @property (nonatomic, strong) JXCategoryListContainerView *listContainerView;
 
-- (instancetype)initWithCategoryViewStyle:(DFContentBaseViewControllerCategoryViewStyle)categoryViewStyle;
+// 确定init方法用什么?
+// 模仿uipagevc的init方法, 先设style, 后设vc的值
+- (instancetype)initWithCategoryViewStyle:(DFCategoryViewStyle)categoryViewStyle;
+//
 
 - (JXCategoryBaseView *)preferredCategoryView;
 - (CGFloat)preferredCategoryViewHeight;

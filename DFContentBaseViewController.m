@@ -13,7 +13,7 @@
 
 @implementation DFContentBaseViewController
 
-- (instancetype)initWithCategoryViewStyle:(DFContentBaseViewControllerCategoryViewStyle)categoryViewStyle {
+- (instancetype)initWithCategoryViewStyle:(DFCategoryViewStyle)categoryViewStyle {
     self = [super init];
     if (self) {
         _categoryViewStyle = categoryViewStyle;
@@ -36,10 +36,14 @@
     
     if (self.categoryTitleView) {
         self.categoryTitleView.titles = self.titles;
-        self.categoryTitleView.indicators = @[[self preferredIndicator]];
+        
+        JXCategoryIndicatorComponentView *indicator = [self preferredIndicator];
+        if (indicator) {
+            self.categoryTitleView.indicators = @[indicator];
+        }
     }
     
-    if (self.categoryViewStyle == DFContentBaseViewControllerCategoryViewStyleTitleView) {
+    if (self.categoryViewStyle == DFCategoryViewStyleTitleView) {
         self.navigationItem.titleView = self.categoryView;
     }
 }
@@ -49,7 +53,8 @@
     
     CGFloat categoryViewHeight = [self preferredCategoryViewHeight];
     CGFloat listContainerViewY = categoryViewHeight;
-    if (self.categoryViewStyle == DFContentBaseViewControllerCategoryViewStyleDefault) {
+    
+    if (self.categoryViewStyle == DFCategoryViewStyleTitleView) {
         categoryViewHeight = self.navigationController.navigationBar.bounds.size.height;
         listContainerViewY = 0;
     }
